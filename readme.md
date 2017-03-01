@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/byapparov/rGoodData.svg?branch=master)](https://travis-ci.org/byapparov/rGoodData)
+
 With rGoodData package you should be able to access data via GoodData API from R.
 
 Here is a short example:
