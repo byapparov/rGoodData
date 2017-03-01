@@ -12,3 +12,6 @@ RoxygenNote: 6.0.1
 Imports:
   data.table,
   httr
+Suggests:
+  testthat,
+  httptest
