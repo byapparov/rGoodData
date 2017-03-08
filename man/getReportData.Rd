@@ -4,10 +4,12 @@
 \alias{getReportData}
 \title{Gets report results as data.table}
 \usage{
-getReportData(uri)
+getReportData(uri, wait = 5)
 }
 \arguments{
 \item{uri}{url for the report resutls}
+
+\item{wait}{time to wait till next get attempt if report is not ready}
 }
 \value{
 data.table with report
