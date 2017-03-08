@@ -6,6 +6,7 @@ sudo: false
 
 r_github_packages:
   - jimhester/covr
+  - nealrichardson/httptest
 
 after_success:
   - Rscript -e 'covr::codecov()'
