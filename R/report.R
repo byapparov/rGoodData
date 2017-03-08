@@ -39,14 +39,24 @@ getReportRawUri <- function(obj) {
 #' @export
 #'
 #' @param uri url for the report resutls
+#' @param wait time to wait till next get attempt if report is not ready
 #' @return data.table with report
-getReportData <- function(uri) {
+getReportData <- function(uri, wait = 5) {
   response <- GET(uri,
                   authenticate(Sys.getenv("GOODDATA_USER"), Sys.getenv("GOODDATA_PASSWORD")),
                   add_headers(Accept = "application/json",
                               "Content-Type" = "application/json"))
-  report <- content(response, "text", encoding = "UTF-8")
-  report <- fread(report, encoding = "UTF-8")
+  if(status_code(response) >= 200 & status_code(response) < 300) {
+    if(response$headers$`content-type` == "text/csv") {
+      report <- content(response, "text", encoding = "UTF-8")
+      report <- fread(report, encoding = "UTF-8")
+    } else { # we have to retry as report data was not generated yet.
+      cat("\rWaiting for report: ", wait, " sec")
+      Sys.sleep(wait)
+      wait <- min(wait * 2, 60)
+      report <- getReportData(uri, wait)
+    }
+  }
   return(report)
 }
 
