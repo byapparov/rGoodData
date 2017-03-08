@@ -56,8 +56,17 @@ getReportData <- function(uri, wait = 5) {
       wait <- min(wait * 2, 60)
       report <- getReportData(uri, wait)
     }
+    return(report)
+  } else { # error
+    type <- http_type(response)
+    if (type == "application/json") {
+      out <- content(response, "parsed", "application/json")
+      stop("HTTP error [", out$error$errorClass, "] ", out$message, call. = FALSE)
+    } else {
+      out <- content(response, "text")
+      stop("HTTP error [", response$status, "] ", out, call. = FALSE)
+    }
   }
-  return(report)
 }
 
 #' Gets last definition for a report object id
