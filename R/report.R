@@ -20,7 +20,7 @@ getReportRawUri <- function(obj) {
                     }
                   }', Sys.getenv("GOODDATA_PROJECT"), obj)
 
-  api.url <- paste0(Sys.getenv("GOODDATA_DOMAIN"), "/gdc/projects/",
+  api.url <- paste0(Sys.getenv("GOODDATA_DOMAIN"), "/gdc/app/projects/",
                     Sys.getenv("GOODDATA_PROJECT"), "/execute/raw")
 
   response <- POST(url = api.url,
