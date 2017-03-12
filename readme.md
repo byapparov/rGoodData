@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/byapparov/rGoodData.svg?branch=master)](https://travis-ci.org/byapparov/rGoodData)
-![codecov](https://codecov.io/gh/byapparov/rGoodData/branch/master/graph/badge.svg)](https://codecov.io/gh/byapparov/rGoodData)
+[![codecov](https://codecov.io/gh/byapparov/rGoodData/branch/master/graph/badge.svg)](https://codecov.io/gh/byapparov/rGoodData)
+
 
 With rGoodData package you should be able to access data via GoodData API from R.
 
