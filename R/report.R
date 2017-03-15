@@ -94,6 +94,8 @@ processResponse <- function(response) {
 }
 
 #' Stops the execution for response with bad status codes
+#'
+#' @param response HTTP response that has error status code
 processResponseError <- function(response) {
   type <- http_type(response)
   if (type == "application/json") {

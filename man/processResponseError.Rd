@@ -6,6 +6,9 @@
 \usage{
 processResponseError(response)
 }
+\arguments{
+\item{response}{HTTP response that has error status code}
+}
 \description{
 Stops the execution for response with bad status codes
 }
