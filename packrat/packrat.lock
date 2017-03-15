@@ -106,11 +106,11 @@ Hash: 6c7e3a96d9034d3ba8e6a07f7e2a333d
 Package: httptest
 Source: github
 Version: 1.1.3
-Hash: 13a5712faa9277bf098f875ad7c0315c
+Hash: 74f44b5eb807b3e8d908a85cf9161fe3
 GithubRepo: httptest
-GithubUsername: nealrichardson
+GithubUsername: byapparov
 GithubRef: master
-GithubSha1: b477bb1f0b222907024b442f23a25bd09a74fa12
+GithubSha1: ddebcc32f5d427239ab9c23ae048e15d906e0181
 
 Package: httr
 Source: CRAN
@@ -124,8 +124,8 @@ Hash: 488b93c2a4166db0d15f1e8d882cb1d4
 
 Package: jsonlite
 Source: CRAN
-Version: 1.2
-Hash: 3a193a612cae6814719ed523f7e7cf44
+Version: 1.3
+Hash: b9cc3c97b7a6cd513e9b516fe881d6c9
 
 Package: knitr
 Source: CRAN
@@ -151,6 +151,11 @@ Package: mime
 Source: CRAN
 Version: 0.5
 Hash: 463550cf44fb6f0a2359368f42eebe62
+
+Package: mockery
+Source: CRAN
+Version: 0.3.0
+Hash: b101ff792e627871b8b75c38a1ff7442
 
 Package: openssl
 Source: CRAN
@@ -219,7 +224,7 @@ Hash: 774eb7be9087cdc24b53b74e5359cfac
 Package: xml2
 Source: CRAN
 Version: 1.1.1
-Hash: b913af17a4e43c2fb83f3b60b5353a27
+Hash: 74808ddfc694c8af8dfff9f8bf9f2b93
 
 Package: yaml
 Source: CRAN

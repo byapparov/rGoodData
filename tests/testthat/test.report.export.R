@@ -44,6 +44,8 @@ with_mock(
   getResponseType = mock("application/json", "application/json", "text/csv"),
   {
     with_mock_API({
+       Sys.setenv(GOODDATA_DOMAIN = "test.com")
+       Sys.setenv(GOODDATA_PROJECT = "dummy")
        expect_output(res <- getReportData("test.com/dummy", 0.012), regexp = "0.012")
        expect_true(is.data.table(res))
        expect_identical(nrow(res), 2L)
