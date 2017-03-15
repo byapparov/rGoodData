@@ -107,6 +107,10 @@ processResponse <- function(response) {
   }
 }
 
+#' Extracts repsonse type from the HTTP response
+#' @export
+#' @param response http response object
+#' @return content type of the response
 getResponseType <-function(response) {
   return(response$headers$`content-type`)
 }

@@ -41,7 +41,7 @@ with_mock(
   buildMockURL = mock("test.com/report-data-201.json",
                       "test.com/report-data-201.json",
                       "test.com/report-data-200.csv"),
-  getResponseType = mock("application/json", "application/json", "text/csv"),
+  `rGoodData::getResponseType` = mock("application/json", "application/json", "text/csv"),
   {
     with_mock_API({
        Sys.setenv(GOODDATA_DOMAIN = "test.com")
