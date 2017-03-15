@@ -3,4 +3,3 @@
 export(getLastDefinition)
 export(getReportData)
 export(getReportRawUri)
-export(getResponseType)

@@ -49,7 +49,7 @@ getReportData <- function(uri, wait = 5) {
                               "Content-Type" = "application/json"))
   status <- status_code(response)
   if(status >= 200 & status < 300) {
-    if(getResponseType(response) == "text/csv") {
+    if(http_type(response) == "text/csv") {
       report <- content(response, "text", encoding = "UTF-8")
       report <- fread(report, encoding = "UTF-8")
     } else { # we have to retry as report data was not generated yet.
@@ -102,15 +102,8 @@ processResponse <- function(response) {
       stop("HTTP error [", out$error$code, "] ", out$error$message, call. = FALSE)
     } else {
       out <- content(response, "text")
-      stop("HTTP error [", response$status, "] ", out, call. = FALSE)
+      stop("HTTP error [", status_code(response), "] ", out, call. = FALSE)
     }
   }
 }
 
-#' Extracts repsonse type from the HTTP response
-#' @export
-#' @param response http response object
-#' @return content type of the response
-getResponseType <-function(response) {
-  return(response$headers$`content-type`)
-}
