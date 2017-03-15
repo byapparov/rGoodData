@@ -60,14 +60,7 @@ getReportData <- function(uri, wait = 5) {
     }
     return(report)
   } else { # error
-    type <- http_type(response)
-    if (type == "application/json") {
-      out <- content(response, "parsed", "application/json")
-      stop("HTTP error [", out$error$code, "] ", out$message, call. = FALSE)
-    } else {
-      out <- content(response, "text")
-      stop("HTTP error [", status, "] ", out, call. = FALSE)
-    }
+    processResponseError(response)
   }
 }
 
@@ -96,14 +89,18 @@ processResponse <- function(response) {
   if(status_code(response) == 200) {
     c <- content(response, "parsed", http_type(response))
   } else { # error
-    type <- http_type(response)
-    if (type == "application/json") {
-      out <- content(response, "parsed", "application/json")
-      stop("HTTP error [", out$error$code, "] ", out$error$message, call. = FALSE)
-    } else {
-      out <- content(response, "text")
-      stop("HTTP error [", status_code(response), "] ", out, call. = FALSE)
-    }
+    processResponseError(response)
   }
 }
 
+#' Stops the execution for response with bad status codes
+processResponseError <- function(response) {
+  type <- http_type(response)
+  if (type == "application/json") {
+    out <- content(response, "parsed", "application/json")
+    stop("HTTP error [", out$error$code, "] ", out$error$message, call. = FALSE)
+  } else {
+    out <- content(response, "text")
+    stop("HTTP error [", status_code(response), "] ", out, call. = FALSE)
+  }
+}
