@@ -25,10 +25,10 @@ getReportRawUri <- function(obj) {
 
   response <- POST(url = api.url,
                    body = values,
-                   authenticate(Sys.getenv("GOODDATA_USER"), Sys.getenv("GOODDATA_PASSWORD")),
                    content_type_json() ,
                    add_headers(Accept = "application/json",
-                               "Content-Type" = "application/json"))
+                               "Content-Type" = "application/json",
+                               Cookie = authCookie()))
 
   c <- processResponse(response)
   uri <- paste0(Sys.getenv("GOODDATA_DOMAIN"), c$uri)
@@ -71,38 +71,12 @@ getReportData <- function(uri, wait = 5) {
 #' @return integer id of the latest report definitin object
 getLastDefinition <- function(report.obj) {
   response <- GET(url = paste0(Sys.getenv("GOODDATA_DOMAIN"), "/gdc/md/", Sys.getenv("GOODDATA_PROJECT"), "/obj/", report.obj),
-                  authenticate(Sys.getenv("GOODDATA_USER"), Sys.getenv("GOODDATA_PASSWORD")),
-                  add_headers("Accept" = "application/json",
-                              "Content-Type" = "application/json"))
+                  add_headers(Accept = "application/json",
+                              "Content-Type" = "application/json",
+                              Cookie = authCookie()))
 
   c <- processResponse(response)
   last.definition <- tail(c$report$content$definitions, 1)[[1]]
   definition.obj <- tail(strsplit(last.definition, "/")[[1]], 1)
   return(as.integer(definition.obj))
-}
-
-#' Processes http response and returns a list of results
-#'
-#' @param response http response from the GoodData API
-#' @return list of resutls parsed from the response
-processResponse <- function(response) {
-  if(status_code(response) == 200) {
-    c <- content(response, "parsed", http_type(response))
-  } else { # error
-    processResponseError(response)
-  }
-}
-
-#' Stops the execution for response with bad status codes
-#'
-#' @param response HTTP response that has error status code
-processResponseError <- function(response) {
-  type <- http_type(response)
-  if (type == "application/json") {
-    out <- content(response, "parsed", "application/json")
-    stop("HTTP error [", out$error$code, "] ", out$error$message, call. = FALSE)
-  } else {
-    out <- content(response, "text")
-    stop("HTTP error [", status_code(response), "] ", out, call. = FALSE)
-  }
 }

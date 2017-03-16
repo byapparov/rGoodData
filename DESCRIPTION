@@ -15,4 +15,9 @@ Imports:
 Suggests:
   testthat,
   httptest,
-  mockery
+  mockery,
+  jsonlite
+Collate:
+  'request.R'
+  'login.R'
+  'report.R'
