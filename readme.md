@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/byapparov/rGoodData/branch/master/graph/badge.svg)](https://codecov.io/gh/byapparov/rGoodData)
 
 
-With rGoodData package you should be able to access data via GoodData API from R.
+rGoodData package provides interface to GoodData API. With it you can load report data in the raw.
 
 Here is a short example:
 
@@ -14,6 +14,7 @@ Sys.setenv(GOODDATA_USER = "user-name")
 Sys.setenv(GOODDATA_PASSWORD = "user-password")
 
 library(rGoodData)
+library(data.table)
 # get data for a given report object-id
 def.obj <- getLastDefinition(1213086)
 uri <- getReportRawUri(def.obj)
