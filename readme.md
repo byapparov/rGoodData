@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/byapparov/rGoodData/branch/master/graph/badge.svg)](https://codecov.io/gh/byapparov/rGoodData)
 
 
-rGoodData package provides interface to GoodData API. With it you can load report data in the raw.
+rGoodData package provides interface to GoodData API. With it you can load report data in the raw format.
 
 Here is a short example:
 
