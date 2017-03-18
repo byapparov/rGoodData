@@ -11,12 +11,12 @@ LazyData: true
 RoxygenNote: 6.0.1
 Imports:
   data.table,
-  httr
+  httr,
+  jsonlite
 Suggests:
   testthat,
   httptest,
-  mockery,
-  jsonlite
+  mockery
 Collate:
   'request.R'
   'login.R'

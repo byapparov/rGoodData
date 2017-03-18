@@ -1,3 +1,6 @@
+#' @import utils
+#' @import data.table
+
 library(httr)
 library(data.table)
 

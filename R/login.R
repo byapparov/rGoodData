@@ -1,7 +1,11 @@
+#' @import jsonlite
+#' @import httr
+
 library(httr)
 library(jsonlite)
 
 #' Gets the SST (SuperSecured Token) for Login
+#'
 #'
 #' @export
 #' @return STT
