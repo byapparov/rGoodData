@@ -2,13 +2,14 @@
 % Please edit documentation in R/login.R
 \name{authCookie}
 \alias{authCookie}
-\title{Gets that TT auth cookie, wrapper for the easy access to TT}
+\title{Gets that Temporary Token (TT) auth cookie, wrapper for the easy access to TT}
 \usage{
 authCookie()
 }
 \value{
-TT
+Temporary Token (TT)
 }
 \description{
-Gets that TT auth cookie, wrapper for the easy access to TT
+Gets that Temporary Token (TT) auth cookie, wrapper for the easy access to TT
 }
+\keyword{internal}

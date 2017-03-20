@@ -1,6 +1,6 @@
 Package: rGoodData
 Type: Package
-Title: Package allows to export GoodData reports into data.tables
+Title: Package Allows to Export Raw GoodData Reports
 Version: 0.1.0
 Author: byapparov@gmail.com
 Maintainer: Bulat Yapparov <byapparov@gmail.com>

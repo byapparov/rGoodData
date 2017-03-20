@@ -12,3 +12,4 @@ processResponseError(response)
 \description{
 Stops the execution for response with bad status codes
 }
+\keyword{internal}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/login.R
 \name{superSecuredToken}
 \alias{superSecuredToken}
-\title{Gets the SST (SuperSecured Token) for Login}
+\title{Gets the  Super Secured Token (SST) for Login}
 \usage{
 superSecuredToken()
 }
@@ -10,5 +10,6 @@ superSecuredToken()
 STT
 }
 \description{
-Gets the SST (SuperSecured Token) for Login
+Gets the  Super Secured Token (SST) for Login
 }
+\keyword{internal}

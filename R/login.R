@@ -1,13 +1,13 @@
 #' @import jsonlite
 #' @import httr
+#' @import data.table
 
 library(httr)
 library(jsonlite)
 
-#' Gets the SST (SuperSecured Token) for Login
+#' Gets the  Super Secured Token (SST) for Login
+#' @keywords internal
 #'
-#'
-#' @export
 #' @return STT
 superSecuredToken <- function() {
   values <- toJSON(list(postUserLogin = list(login = Sys.getenv("GOODDATA_USER"),
@@ -29,8 +29,9 @@ superSecuredToken <- function() {
   return(sst)
 }
 
-#' Gets the TT (Temporary Token) for a given SST
-#' @export
+#' Gets the Temporary Token (TT) for a given Super Secured Token (SST)
+#' @keywords internal
+#'
 #' @param sst SST
 #' @return TT
 temporaryToken <- function(sst) {
@@ -47,10 +48,11 @@ temporaryToken <- function(sst) {
   return(tt)
 }
 
-#' Gets that TT auth cookie, wrapper for the easy access to TT
-#'
+#' Gets that Temporary Token (TT) auth cookie, wrapper for the easy access to TT
 #' @export
-#' @return TT
+#' @keywords internal
+#'
+#' @return Temporary Token (TT)
 authCookie <- function() {
   sst <- superSecuredToken()
   tt <- temporaryToken(sst)

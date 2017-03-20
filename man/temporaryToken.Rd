@@ -2,7 +2,7 @@
 % Please edit documentation in R/login.R
 \name{temporaryToken}
 \alias{temporaryToken}
-\title{Gets the TT (Temporary Token) for a given SST}
+\title{Gets the Temporary Token (TT) for a given Super Secured Token (SST)}
 \usage{
 temporaryToken(sst)
 }
@@ -13,5 +13,6 @@ temporaryToken(sst)
 TT
 }
 \description{
-Gets the TT (Temporary Token) for a given SST
+Gets the Temporary Token (TT) for a given Super Secured Token (SST)
 }
+\keyword{internal}
