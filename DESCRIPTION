@@ -1,10 +1,11 @@
 Package: rGoodData
 Type: Package
-Title: Package Allows to Export Raw GoodData Reports
+Title: GoodData API Client Package
+Description: Export raw reports from 'GoodData' business intelligence platform 
+    (see <http://www.gooddata.com> for more information).
 Version: 0.1.0
-Author: byapparov@gmail.com
+Author: Bulat Yapparov [aut, cre]
 Maintainer: Bulat Yapparov <byapparov@gmail.com>
-Description: Currently package provides support for raw report exports.
 License: GPL
 Encoding: UTF-8
 LazyData: true
