@@ -33,6 +33,6 @@ processResponseError <- function(response) {
 #' Helper function that gets user agent header
 getUserAgent <- function() {
   user.agent <- Sys.getenv("GOODDATA_USER_AGENT",
-                           unset = "rGoodData / 0.1.1")
+                           unset = paste0("rGoodData" , " / ", packageVersion("rGoodData")))
   return(user.agent)
 }
