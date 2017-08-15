@@ -3,7 +3,7 @@ Type: Package
 Title: GoodData API Client Package
 Description: Export raw reports from 'GoodData' business intelligence platform 
     (see <http://www.gooddata.com> for more information).
-Version: 0.1.0
+Version: 0.1.1
 Author: Bulat Yapparov [aut, cre]
 Maintainer: Bulat Yapparov <byapparov@gmail.com>
 License: GPL
