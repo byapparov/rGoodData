@@ -11,10 +11,12 @@ executeSchedule(schedule.id, retry = FALSE)
 
 \item{retry}{If true, applies the reschedule property if the schedule has it set. When not set, defaults to false.}
 }
+\value{
+uri link to schedule execution.
+}
 \description{
 Executes GoodData schedule
 }
-\references{
-GoodData API Documentation:
- https://help.gooddata.com/display/doc/API+Reference#/reference/scheduling-and-notifications/manage-schedule-executions/execute-a-schedule
+\seealso{
+\href{https://help.gooddata.com/display/doc/API+Reference#/reference/scheduling-and-notifications/manage-schedule-executions/execute-a-schedule}{GoodData API Documentation - Execute Schedule}
 }

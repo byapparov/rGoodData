@@ -36,6 +36,7 @@ getReportRawUri <- function(obj) {
                                Cookie = authCookie()))
 
   c <- processResponse(response)
+
   uri <- paste0(Sys.getenv("GOODDATA_DOMAIN"), c$uri)
   return(uri)
 }
