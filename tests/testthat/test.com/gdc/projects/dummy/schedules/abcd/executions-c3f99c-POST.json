@@ -1,0 +1,11 @@
+{
+  "execution": {
+    "createdTime": "2017-05-26T19:04:01.839Z",
+    "status": "SCHEDULED",
+    "trigger": "MANUAL",
+    "processLastDeployedBy": "test.user@test.com",
+    "links": {
+      "self": "/gdc/projects/dummy/schedules/abcd/executions/1234"
+    }
+  }
+}
