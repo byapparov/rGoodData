@@ -8,7 +8,7 @@ Sys.setenv(GOODDATA_PROJECT = "dummy")
 
 context("Report data")
 with_mock(
-  authCookie = mock("", cycle = T),
+  authCookie = mock("", cycle = TRUE),
   with_mock_API({
     test_that("Report definition is extracted correctly", {
 
