@@ -1,8 +1,8 @@
 
 #' Execute schedule
-#'
+#' 
 #' Executes GoodData schedule
-#'
+#' @export
 #' @param schedule.id The ID of the schedule you want to manage.
 #' @param retry  If true, applies the reschedule property if the schedule has it set. When not set, defaults to false.
 #' @return uri link to schedule execution.
