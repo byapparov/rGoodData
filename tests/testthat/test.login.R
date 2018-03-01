@@ -19,4 +19,16 @@ test_that("Login unauthorized message is correct", {
       expect_error(sst <- superSecuredToken(), regexp = "401")
     })
   )
+
+})
+
+Sys.setenv(GOODDATA_DOMAIN = "test.com")
+Sys.setenv(GOODDATA_PROJECT = "dummy")
+
+test_that("Correct auth code is captured from response header", {
+  with_mock_API({
+    Sys.setenv(TZ='UTC')
+    sst <- superSecuredToken()
+    expect_match(sst, "^GDCAuthTT=")
+  })
 })
