@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/byapparov/rGoodData.svg?branch=master)](https://travis-ci.org/byapparov/rGoodData)
 [![codecov](https://codecov.io/gh/byapparov/rGoodData/branch/master/graph/badge.svg)](https://codecov.io/gh/byapparov/rGoodData)
-
+[![CRAN](http://www.r-pkg.org/badges/version/rGoodData)](https://cran.r-project.org/package=rGoodData)
+[![Downloads](http://cranlogs.r-pkg.org/badges/rGoodData?color=brightgreen)](http://www.r-pkg.org/pkg/rGoodData)
 
 rGoodData package provides interface to GoodData API. With it you can load report data in the raw format.
 
