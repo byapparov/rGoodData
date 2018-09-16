@@ -2,6 +2,5 @@ packrat/lib*/
 packrat/src
 .Rproj.user
 .Rhistory
-.Rbuildignore
 rGoodData.Rproj
 .Rprofile

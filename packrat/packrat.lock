@@ -1,11 +1,7 @@
 PackratFormat: 1.4
-PackratVersion: 0.4.8.1
+PackratVersion: 0.4.8.12
 RVersion: 3.3.3
 Repos: CRAN=https://cran.rstudio.com/
-
-Package: BH
-Source: CRAN
-Version: 1.65.0-1
 
 Package: R6
 Source: CRAN
@@ -27,14 +23,9 @@ Source: CRAN
 Version: 1.1.1
 Hash: add136c9d4540b96290e9cc438763da7
 
-Package: brew
-Source: CRAN
-Version: 1.0-6
-
 Package: cli
 Source: CRAN
 Version: 1.0.0
-Requires: assertthat, crayon
 Hash: f4239f89feb7ddc65821e4514e9734ae
 
 Package: commonmark
@@ -60,20 +51,17 @@ Hash: 3c270a59ca3298aba8df3c1ae3bbea19
 Package: desc
 Source: CRAN
 Version: 1.1.1
-Requires: R6, assertthat, crayon, rprojroot
 Hash: 2f99e95211c4ba6efcf5538d096587fc
 
 Package: devtools
 Source: CRAN
 Version: 1.13.3
-Requires: digest, git2r, httr, jsonlite, memoise, rstudioapi, whisker,
-    withr
 Hash: 2e91d10786ace8f6258480f576bb91f3
 
 Package: digest
 Source: CRAN
-Version: 0.6.12
-Hash: e53fb8c58673df868183697e39a6a4d6
+Version: 0.6.13
+Hash: cfce0bc7ed5ba0cdc47182698fae1d24
 
 Package: git2r
 Source: CRAN
@@ -86,15 +74,17 @@ Version: 0.2.0
 Hash: cd78381a9d3fea966ac39bd0daaf5554
 
 Package: httptest
-Source: CRAN
-Version: 2.3.4
-Requires: digest, httr, jsonlite, testthat
-Hash: 92dc1a36355e3a53f3f1f966ce968ab2
+Source: github
+Version: 3.1.1
+Hash: 08c7d35c447bbaa23ac6a3a445b16fab
+GithubRepo: httptest
+GithubUsername: nealrichardson
+GithubRef: master
+GithubSha1: 342593da01f7393278ef117e4648cf9ec4a31ecf
 
 Package: httr
 Source: CRAN
 Version: 1.3.1
-Requires: R6, curl, jsonlite, mime, openssl
 Hash: 2d32e01e53d532c812052e27a1021441
 
 Package: jsonlite
@@ -110,7 +100,6 @@ Hash: bdc4d48c3135e8f3b399536ddf160df4
 Package: memoise
 Source: CRAN
 Version: 1.1.0
-Requires: digest
 Hash: 410fcd334bc626db100237cc1370f2e9
 
 Package: mime
@@ -121,7 +110,6 @@ Hash: 463550cf44fb6f0a2359368f42eebe62
 Package: mockery
 Source: CRAN
 Version: 0.4.1
-Requires: testthat
 Hash: bce6846bd2ed0a41b7cba564bd816dac
 
 Package: openssl
@@ -151,14 +139,11 @@ Hash: 8eb4b2dce38b8f663cb9364b28eaa76b
 Package: roxygen2
 Source: CRAN
 Version: 6.0.1
-Requires: R6, Rcpp, brew, commonmark, desc, digest, stringi, stringr,
-    xml2
 Hash: 2e062ab5f013e29ea37c1702b3fd226e
 
 Package: rprojroot
 Source: CRAN
 Version: 1.2
-Requires: backports
 Hash: fdcac51a7f47decd60556ceefc3c26b1
 
 Package: rstudioapi
@@ -174,14 +159,16 @@ Hash: b6308e49357a0b475f433599e0d8b5eb
 Package: stringr
 Source: CRAN
 Version: 1.2.0
-Requires: magrittr, stringi
 Hash: 25a86d7f410513ebb7c0bc6a5e16bdc3
 
 Package: testthat
-Source: CRAN
-Version: 2.0.0
-Requires: R6, cli, crayon, digest, magrittr, praise, rlang, withr
-Hash: 537114b476376c5773bf3c557f5bbd19
+Source: github
+Version: 2.0.0.9000
+Hash: 12e3ee8741b4ea2b6743ff25b2bee11c
+GithubRepo: testthat
+GithubUsername: r-lib
+GithubRef: master
+GithubSha1: 8216ebe2d84028d1a7a315c5c17c15f93cad3d65
 
 Package: whisker
 Source: CRAN
@@ -190,11 +177,10 @@ Hash: 803d662762e532705c2c066a82d066e7
 
 Package: withr
 Source: CRAN
-Version: 2.1.0
-Hash: 097f730987c2dc13d421b65bf01ddf08
+Version: 2.1.1
+Hash: a86856ae0b4a7c3daf9a3ef0097a403b
 
 Package: xml2
 Source: CRAN
 Version: 1.1.1
-Requires: BH, Rcpp
 Hash: e59e0db73bf5dfad9353543b714b76e9
