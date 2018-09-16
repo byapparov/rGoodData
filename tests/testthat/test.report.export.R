@@ -1,11 +1,6 @@
 library(httptest)
 library(mockery)
 
-Sys.setenv(GOODDATA_DOMAIN = "test.com")
-Sys.setenv(GOODDATA_PROJECT = "dummy")
-
-
-
 context("Report data")
 with_mock(
   authCookie = mock("", cycle = TRUE),
