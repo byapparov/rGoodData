@@ -2,6 +2,7 @@
 
 export(authCookie)
 export(executeSchedule)
+export(gdLoadReport)
 export(getLastDefinition)
 export(getReportData)
 export(getReportRawUri)
