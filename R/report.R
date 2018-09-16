@@ -10,6 +10,19 @@ library(data.table)
 # GOODDATA_USER
 # GOODDATA_PASSWORD
 
+
+#' Loads data from GoodData
+#'
+#' @export
+#' @param report.id identifier of the report
+gdLoadReport <- function(report.id) {
+  definition.id <- getLastDefinition(report.id)
+  report.uri <- getReportRawUri(definition.id)
+  dt <- getReportData(report.uri)
+  return(dt)
+}
+
+
 #' Function gets uri for export of raw report data
 #' @export
 #'

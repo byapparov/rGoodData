@@ -8,7 +8,7 @@ Sys.setenv(GOODDATA_PROJECT = "dummy")
 
 
 test_that("Schedule execution sends POST request" , {
-  with_mock_API(expect_POST(schedule.uri <- executeSchedule("abcd")))
+  without_internet(expect_POST(schedule.uri <- executeSchedule("abcd")))
 })
 
 with_mock(authCookie = mock("", cycle = F), {
