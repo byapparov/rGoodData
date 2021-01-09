@@ -12,7 +12,7 @@ test_that("Schedule execution sends POST request" , {
 })
 
 with_mock(authCookie = mock("", cycle = F), {
-  with_mock_API({
+  with_mock_api({
     test_that("Schedule execution works" , {
       execution <- executeSchedule("abcd")
       expect_equal(execution, "test.com/gdc/projects/dummy/schedules/abcd/executions/1234")
